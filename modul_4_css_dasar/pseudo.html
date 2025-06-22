@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pseudo Class Selectors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dony kurniawan">
+    <meta name="nim" content="243307072">
+    <style>
+        p {
+            display: none;
+            background-color: darkgrey;
+            padding: 20px;
+        }
+
+        div:hover p {
+            display: block;
+        }
+
+        a {
+            display: none;
+            background-color: brown;
+            padding: 10px;
+            color: black;
+        }
+
+        div:hover a {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Pseudo-Class Selectors</h2>
+    </header>
+
+    <div>
+        Letakkan kursor disini untuk melihat div element
+        <p>Saya adalah element p</p>
+    </div>
+
+    <div>
+        Letakkan kursor di sini untuk melihat link
+        <a href="#">Link</a>
+    </div>
+
+</body>
+</html>

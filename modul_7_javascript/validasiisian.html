@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Masukan</title>
+</head>
+<body>
+
+    <script language="javascript">
+        function cekNama(form) {
+            if (form.elements[0].value == "") {
+                alert("Nama harus dimasukkan");
+                form.nama.focus();
+                form.nama.select();
+                return(false);
+            }
+            alert("Terima kasih, " + form.elements[0].value);
+            return(true);
+        }
+    </script>
+
+    <Form NAME="Formku">
+        <PRE>
+Nama : <INPUT TYPE = "TEXT" NAME = "nama"><BR>
+<INPUT TYPE = "BUTTON" VALUE = "Kirim" onclick="cekNama(this.form)"><BR>
+        </PRE>
+    </Form>
+
+</body>
+</html>

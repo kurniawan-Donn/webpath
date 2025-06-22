@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengakses Objek Radio</title>
+</head>
+<body>
+
+    Klik pada musik yang paling anda sukai<br>
+    <FORM NAME = "formTes" METHOD = "GET">
+        <INPUT TYPE = "radio" NAME = "radioMusik" VALUE = "Jazz" onclick="info()">Jazz<BR>
+        <INPUT TYPE = "radio" NAME = "radioMusik" VALUE = "Keroncong" onclick="info()">Keroncong<BR>
+        <INPUT TYPE = "radio" NAME = "radioMusik" VALUE = "Dangdut" onclick="info()">Dangdut<BR>
+        <INPUT TYPE = "radio" NAME = "radioMusik" VALUE = "Lainnya" onclick="info()">Lainnya<BR>
+        <HR>
+        info:<BR>
+        <INPUT TYPE = "TEXT" NAME = "fieldMusik" SIZE = "40">
+    </FORM>
+
+    <SCRIPT LANGUAGE = "javascript">
+        function info(){
+            for (var i = 0; i < 4; i++) {
+                if (document.formTes.radioMusik[i].checked) {
+                    document.formTes.fieldMusik.value = document.formTes.radioMusik[i].value;
+                }
+            }
+        }
+    </SCRIPT>
+
+</body>
+</html>

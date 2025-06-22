@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #1d383d;
+            padding: 15px 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #ADFF2F;
+            color: black;
+        }
+
+        .navbar ul li ul {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            min-width: 120px;
+            z-index: 100;
+        }
+
+        .navbar ul li ul li {
+            margin: 0;
+        }
+
+        .navbar ul li ul li:hover {
+            background-color: #eee;
+        }
+
+        .navbar ul li ul li {
+            padding: 8px 15px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#"></a>hari</li>
+                    <li><a href="#"></a>bulan</li>
+                    <li><a href="#"></a>tahun</li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // jQuery to handle dropdown menu visibility
+        $(document).ready(function() {
+            $('.navbar ul li').hover(
+                function() {
+                    $('ul', this).stop(true, true).slideDown(100);
+                },
+                function() {
+                    $('ul', this).stop(true, true).slideUp(100);
+                }
+            );
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Combinator Selector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Aidilia Fitriasari">
+    <meta name="nim" content="243307062">
+    <style>
+        div p {
+            color: red;
+        }
+
+        div > p {
+            background-color: yellow;
+        }
+
+        div + p {
+            background-color: darkgray;
+        }
+
+        div ~ p {
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Combinator Selector</h2>
+    <div>
+        <p>Paragraf 1 di dalam div</p>
+        <span>
+            <p>Paragraf 2 di dalam span di dalam div</p>
+        </span>
+        <p>Paragraf 3 langsung di dalam div</p>
+    </div>
+    <p>Paragraf 4 setelah div (sibling langsung)</p>
+    <div>
+        <p>Paragraf 5 di dalam div kedua</p>
+    </div>
+    <p>Paragraf 6 setelah div kedua (general sibling)</p>
+    <span>
+        <p>Paragraf 7 di dalam span (bukan affected oleh div selectors di atas)</p>
+    </span>
+    <p>Paragraf 8 setelah span (general sibling dari div jika sebelumnya ada div)</p>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Dialog Progressbar</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #progressbar {
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="startDownload">Start Download</button>
+
+    <div id="downloadDialog" title="Downloading File" style="display: none;">
+        <p>Download Progress:</p>
+        <div id="progressbar"></div>
+        <p id="status"></p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#progressbar").progressbar({
+                value: 0
+            });
+
+            $("#downloadDialog").dialog({
+                autoOpen: false,
+                modal: true,
+                closeOnEscape: false, // Prevent closing with escape key
+                resizable: false,    // Prevent resizing
+                buttons: {}          // No buttons in the dialog footer
+            });
+
+            $("#startDownload").click(function () {
+                $("#downloadDialog").dialog("open");
+                startDownload();
+            });
+
+            function startDownload() {
+                var progress = 0;
+                var downloadInterval = setInterval(function () {
+                    progress += 5;
+                    $("#progressbar").progressbar("value", progress);
+                    $("#status").text("Downloading... " + progress + "%");
+
+                    if (progress >= 100) {
+                        clearInterval(downloadInterval);
+                        $("#status").text("Download Complete!");
+                        setTimeout(function () {
+                            $("#downloadDialog").dialog("close");
+                        }, 1000); // Close dialog after 1 second
+                    }
+                }, 100); // Update every 100ms
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Beranda</title>
+    <link rel="icon" type="image/png" href="icon.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dony kurniawan">
+    <meta name="nim" content="243307072">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            background-color: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 8px 0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul li a:hover {
+            background-color: #bbb;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            min-height: 300px;
+            position: relative;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery img {
+            width: calc(33.33% - 10px);
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            width: calc(33.33% - 10px);
+            opacity: 0.8;
+        }
+
+        .image-gallery img[onmouseenter]:hover {
+            border: 5px solid red;
+        }
+        .image-gallery img[onmouseleave]:not(:hover) {
+            border: none;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                float: none;
+                height: auto;
+            }
+            .image-gallery img {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .image-gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+       <article>
+    <h1>Judul Artikel</h1>
+    <fieldset>
+        <legend><h1>Informasi Pribadi</h1></legend>
+        <table style="padding: 5px;">
+            <tr>
+                <td><label for="Nama">Nama</label></td>
+                <td><input type="text" name="nama_lengkap" required></td>
+            </tr>
+            <tr>
+                <td><label for="telepon">No. Telepon</label></td>
+                <td><input type="tel" pattern="[0-9]{10,13}" placeholder="Masukkan nomor telepon"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Alamat Email</label></td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td><label for="ttl">Tanggal Lahir</label></td>
+                <td><input type="date" min="1987-01-01" max="1993-01-01"></td>
+            </tr>
+            <tr>
+                <td><label for="agama">Agama</label></td>
+                <td>
+                    <select name="agama">
+                        <option>Islam</option>
+                        <option>Kristen</option>
+                        <option>Katolik</option>
+                        <option>Hindu</option>
+                        <option>Budha</option>
+                        <option>Konghucu</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>
+                    <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td><label for="no_ijazah">No. Ijazah SMA/MA</label></td>
+                <td><input type="text" name="no_ijazah" required></td>
+            </tr>
+            <tr>
+                <td>Foto (Maks 20 KB)</td>
+                <td><input type="file" name="foto" accept="image/*"></td>
+            </tr>
+            <tr>
+                <td><label for="nama_ayah">Nama Ayah</label></td>
+                <td><input type="text" name="nama_ayah"></td>
+            </tr>
+            <tr>
+                <td><label for="nama_ibu">Nama Ibu</label></td>
+                <td><input type="text" name="nama_ibu"></td>
+            </tr>
+            <tr>
+                <td>Alamat Rumah</td>
+                <td><textarea name="alamat_rumah"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="no_telp">No. Telepon</label></td>
+                <td><input type="text" name="no_telp"></td>
+            </tr>
+            <tr>
+                <td><label for="nama_sekolah_asal">Nama Sekolah Asal</label></td>
+                <td><input type="text" name="nama_sekolah_asal"></td>
+            </tr>
+            <tr>
+                <td>Alamat Sekolah Asal</td>
+                <td><textarea name="alamat_sekolah_asal"></textarea></td>
+            </tr>
+            <tr>
+                <td>Jurusan Dipilih</td>
+                <td>
+                    <select name="jurusan">
+                        <option>PILIIH--</option>
+                        <option>Komputerisasi Akuntansi</option>
+                        <option>Administrasi Bisnis</option>
+                        <option>Teknik Komputer Kontrol</option>
+                        <option>Teknik Listrik</option>
+                        <option>Mesin Otomotif</option>
+                        <option>Perkeretaapian</option>
+                        <option>Teknologi Informasi</option>
+                        <option>Akuntansi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Tahu informasi ini dari?</td>
+                <td>
+                    <input type="checkbox" name="sumber_info" value="Koran"> Koran
+                    <input type="checkbox" name="sumber_info" value="Website"> Website
+                    <input type="checkbox" name="sumber_info" value="Televisi"> Televisi
+                    <input type="checkbox" name="sumber_info" value="Radio"> Radio
+                    <input type="checkbox" name="sumber_info" value="Teman"> Teman
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Permintaan Pertemuan</legend>
+        <table>
+            <tr>
+                <td><label for="Tp">Tujuan Pertemuan</label></td>
+                <td><input type="text" name="tp"></td>
+            </tr>
+            <tr>
+                <td><label for="Tp">Tingkat Pertemuan</label></td>
+                <td><input type="range" min="0" max="10"></td>
+            </tr>
+            <tr>
+                <td><label for="Tp">Tanggal</label></td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><label for="Tp">Waktu</label></td>
+                <td><input type="time" min="17:00" max="21:00"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <button type="submit" value="Submit">Submit</button>
+    <button type="reset">BATAL</button>
+
+    <p>
+    Tampil sebuah form pada elemen article
+    </p>
+</article>
+    </section>
+
+    <footer>
+        <p>@Dony_kurniawan</p>
+    </footer>
+<script src="main.js"></script>
+</body>
+</html>

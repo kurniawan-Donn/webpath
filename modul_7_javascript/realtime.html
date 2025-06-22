@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanggal, Jam, Menit, Detik</title>
+</head>
+<body>
+
+    <h1>Haii Klik Dibawah Ini Menampilkan Tanggal, Jam, Menit, Detik Realtime</h1>
+    <button onclick="tanggal()">Klik</button>
+    <p id="muncullah"></p>
+
+    <script>
+        function tanggal(){
+            let muncul = new Date();
+            document.getElementById("muncullah").innerHTML = muncul;
+        }
+    </script>
+
+</body>
+</html>

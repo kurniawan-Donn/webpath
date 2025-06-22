@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTS-8">
+    <title>Halaman Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "menu main right"
+                "menu footer footer";
+            grid-template-columns: 1fr 2fr 2fr;
+            grid-template-rows: auto auto auto;
+            gap: 5px;
+            border: 3px solid rgb(160, 236, 116);
+            padding: 5px;
+            background-color: lightblue;
+        }
+
+        .item {
+            background-color: #d6ebff;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgb(86, 209, 135);
+        }
+
+        .header { grid-area: header; }
+        .menu { grid-area: menu; }
+        .main { grid-area: main; }
+        .right { grid-area: right; }
+        .footer { grid-area: footer; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item menu">Menu</div>
+        <div class="item main">Main</div>
+        <div class="item right">Right</div>
+        <div class="item footer">Footer</div>
+    </div>
+
+</body>
+</html>

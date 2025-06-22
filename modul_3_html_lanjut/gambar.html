@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Beranda</title>
+    <link rel="icon" type="image/png" href="icon.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dony kurniawan">
+    <meta name="nim" content="243307072">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background-color: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Gambar Pemandangan</h1>
+            <img src="gambar.jpg" alt="Pemandangan" width="300px">
+            <img src="gambar1.jpg" alt="Pemandangan indah" width="300px">
+            <img src="gambar2.jpg" alt="Pemandangan menakjubkan" width="300px">
+            <img src="gambar4.jpg" alt="gambar 4" width="300px">
+            <img src="gambar5.jpg" alt="gambar 5" width="300px">
+            <img src="gambar6.jpg" alt="Pemandangan" width="300px">
+            <p>dengan menambahkan tag gambar kita berhasil menambahkan gambar yang kita inginkan sesuai dan dengan tombol navigasi diatas kita dapat berpindah ke halaman html yang lainnya juga</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>@Dony_kurniawan</p>
+    </footer>
+
+</body>
+</html>

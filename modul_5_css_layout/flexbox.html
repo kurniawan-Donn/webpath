@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Flexbox</title>
+    <style>
+        .wadah_flex {
+            display: flex;
+            background-color: rgb(126, 217, 74);
+            flex-flow: column-reverse;
+            justify-content: center;
+        }
+
+        .wadah_flex div {
+            background-color: rgb(86, 86, 172);
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wadah_flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+
+    <p><b>Skenario 1</b> &#8594; Halaman menampilkan kotak angka dari 10 ke 1 secara vertikal karena flex-flow: column-reverse.</p>
+    <p><b>Skenario 2</b> &#8594; Setiap kotak angka diberi warna biru, margin 10px, dan padding 20px agar terlihat rapi dan menonjol.</p>
+    <p><b>Skenario 3</b> &#8594; Wadah utama (container) diberi warna latar merah untuk membedakan area flex dengan elemen lain.</p>
+    <p><b>Skenario 4</b> &#8594; Semua kotak angka disejajarkan secara tengah secara vertikal menggunakan justify-content: center.</p>
+    <p><b>Skenario 5</b> &#8594; Ukuran font angka dibuat besar (30px) agar terlihat jelas dan mudah dibaca.</p>
+</body>
+</html>

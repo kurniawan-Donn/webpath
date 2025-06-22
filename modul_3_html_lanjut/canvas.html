@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Beranda</title>
+    <link rel="icon" type="image/png" href="icon.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dony kurniawan">
+    <meta name="nim" content="243307072">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            background-color: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 8px 0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul li a:hover {
+            background-color: #bbb;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            min-height: 300px;
+            position: relative;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery img {
+            width: calc(33.33% - 10px);
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            width: calc(33.33% - 10px);
+            opacity: 0.8;
+        }
+
+        .image-gallery img[onmouseenter]:hover {
+            border: 5px solid red;
+        }
+        .image-gallery img[onmouseleave]:not(:hover) {
+            border: none;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                float: none;
+                height: auto;
+            }
+            .image-gallery img {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .image-gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+        <article>
+    <h1>Judul Artikel</h1>
+    <canvas id="canvas" width="400" height="400" style="background-color: #3c1414;"></canvas>
+    <p>
+    </p>
+</article>
+    </section>
+
+    <footer>
+        <p>@Dony_kurniawan</p>
+    </footer>
+<script src="main.js"></script>
+</body>
+</html>

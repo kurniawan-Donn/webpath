@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Judul</title>
+    <style>
+        .grid_container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #21e25e;
+            padding: 10px;
+            grid-template-columns: 10px 500px 20px 10px;
+        }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: rgba(240, 240, 235, 0.8);
+            padding: 20px;
+            grid-column: 1 / 2; /* Ini akan di-override oleh grid-column-start dan grid-column-end jika tidak dihapus. */
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid_container">
+    <div class="item1">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+</div>
+
+<div>
+    <p>Kesimpulan: Dengan menggunakan properti grid-column-start: 1; dan grid-column-end: 3;, elemen dalam grid akan membentang dari kolom pertama hingga kolom ketiga.</p>
+</div>
+
+<div>
+    <p>Kesimpulan skenario 1: Dengan mengubah nilai grid-template-columns, auto auto &rarr; Grid hanya memiliki dua kolom dengan lebar yang menyesuaikan kontennya.</p>
+    <p>70px 300px auto 40px &rarr; Grid memiliki empat kolom dengan lebar tetap untuk tiga kolom pertama dan satu kolom yang menyesuaikan kontennya (auto).</p>
+    <p>10px 500px 20px 10px &rarr; Grid memiliki empat kolom dengan lebar yang sudah ditentukan secara spesifik.</p>
+</div>
+
+<div>
+    <p>Kesimpulan skenario 2: Dengan menggunakan properti grid-row: 1 / 4;</p>
+    <p>Elemen dalam grid akan membentang dari baris pertama hingga baris keempat.</p>
+    <p>Jika rentang diperbesar (misalnya 1 / 5), elemen akan semakin memanjang ke bawah.</p>
+    <p>Jika rentang dipersempit (misalnya 1 / 2), elemen hanya akan berada dalam satu baris.</p>
+</div>
+
+</body>
+</html>

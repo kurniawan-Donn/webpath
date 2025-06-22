@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Belajar CSS Grid Box</title>
+    <style>
+        .tempat_gid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #a9e25e;
+            padding: 10px;
+            grid-gap: 50px;
+        }
+
+        .item_grid {
+            background-color: rgba(240, 240, 235, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tampilan:</h1>
+    <div class="tempat_gid">
+        <div class="item_grid">1</div>
+        <div class="item_grid">2</div>
+        <div class="item_grid">3</div>
+        <div class="item_grid">4</div>
+        <div class="item_grid">5</div>
+        <div class="item_grid">6</div>
+        <div class="item_grid">7</div>
+        <div class="item_grid">8</div>
+        <div class="item_grid">9</div>
+    </div>
+
+    <div>
+        <p>Tulis kesimpulan ujicoba skenario1: Di dalam sebuah container grid, dapat di isi menggunakan grid lagi dengan menyusun elemen-elemennya secara terpisah.</p>
+        <p>Tulis kesimpulan ujicoba skenario2: Dengan mengubah nilai properti display menjadi inline-grid, elemen akan tetap sejajar dengan elemen lain dalam satu baris jika memungkinkan, namun tetap dapat menggunakan properti grid.</p>
+        <p>Tulis kesimpulan ujicoba skenario3: Menggunakan properti grid-column-gap dan grid-row-gap dalam elemen grid berfungsi untuk mengontrol jarak horizontal antar kolom, sedangkan grid-row-gap mengatur jarak vertikal antar baris.</p>
+        <p>Tulis kesimpulan ujicoba skenario4: Menggunakan properti grid-gap pada item grid berfungsi untuk memberikan jarak antara item grid secara keseluruhan. Ini membantu dalam meningkatkan keterbacaan dan estetika tata letak tanpa perlu mengatur margin secara manual pada setiap item.</p>
+    </div>
+</body>
+</html>
