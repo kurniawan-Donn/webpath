@@ -11,7 +11,6 @@
 Repositori ini menyajikan **12+ modul pembelajaran** lengkap untuk mata kuliah _Desain dan Pemrograman Web_, cocok untuk:
 
 - 📘 Mahasiswa pemula yang ingin belajar dari nol
-- 👨‍🏫 Dosen/pengajar sebagai bahan ajar siap pakai
 - 💼 Siapa pun yang ingin memahami pembuatan website secara menyeluruh
 
 ---
